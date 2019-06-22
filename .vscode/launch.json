@@ -6,6 +6,7 @@
     "configurations": [
         {
             "name": "(gdb) Launch",
+            "type": "cppdbg",
             "request": "launch",
             "program": "enter program name, for example ${workspaceFolder}/a.out",
             "args": [],
@@ -21,13 +22,6 @@
                     "ignoreFailures": true
                 }
             ]
-        },
-        {
-            "name": "Python: Current File",
-            "type": "python",
-            "request": "launch",
-            "program": "${file}",
-            "console": "integratedTerminal"
         }
     ]
 }
