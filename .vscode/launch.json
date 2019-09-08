@@ -8,6 +8,8 @@
 
     "version": "0.2.0",
     "configurations": [
+
+
         {
             "name": "(gdb) Launch",
             "type": "cppdbg",
@@ -26,6 +28,14 @@
                     "ignoreFailures": true
                 }
             ]
+        },
+
+        {
+            "name": "Python: Current File",
+            "type": "python3",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal"
         }
     ]
 }

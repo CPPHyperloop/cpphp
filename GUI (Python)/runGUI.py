@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*- 
+
 import tkinter as tk
 from PIL import Image, ImageTk
 import random
@@ -45,14 +47,23 @@ main_canv.pack()
 # IMAGE / ICON FILE PATHS
 # Hyperloop Logo courtesy of Cal Poly Pomona Hyperloop Club.
 # Icons courtesy of FreePik.com.
-hyperloop_logo = tk.PhotoImage(file='images\\hyperloop\\hyperloop_logo_scale25.png')
-battery_icon = tk.PhotoImage(file='images\\icons\\battery.png')
-com_icon = tk.PhotoImage(file='images\\icons\\com.png')
-kin_icon = tk.PhotoImage(file='images\\icons\\kin.png')
-pod_icon = tk.PhotoImage(file='images\\icons\\pod.png')
-time_icon = tk.PhotoImage(file='images\\icons\\time.png')
-motor_icon = tk.PhotoImage(file='images\\icons\\motor.png')
-progress_icon = ImageTk.PhotoImage(file='images\\icons\\progress.png')
+hypPath = Image.open("images/hyperloop/scale25.png")
+batPath = Image.open("images/icons/battery.png")
+comPath = Image.open("images/icons/com.png")
+kinPath = Image.open("images/icons/kin.png")
+podPath = Image.open("images/icons/pod.png")
+timePath = Image.open("images/icons/time.png")
+motorPath = Image.open("images/icons/motor.png")
+progressPath = Image.open("images/icons/progress.png")
+
+hyperloop_logo = ImageTk.PhotoImage(hypPath)
+battery_icon = ImageTk.PhotoImage(batPath)
+com_icon = ImageTk.PhotoImage(comPath)
+kin_icon = ImageTk.PhotoImage(kinPath)
+pod_icon = ImageTk.PhotoImage(podPath)
+time_icon = ImageTk.PhotoImage(timePath)
+motor_icon = ImageTk.PhotoImage(motorPath)
+progress_icon = ImageTk.PhotoImage(progressPath)
 
 # HYPERLOOP LOGO
 # Creates and adds Hyperloop Logo to the workspace.
