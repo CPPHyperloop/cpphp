@@ -3,7 +3,8 @@
 import tkinter as tk
 from PIL import Image, ImageTk
 import random
-# this is a test  nbhbh
+import time
+
 # PIXEL FORMATTING
 # Used to adjust pixel coordinates of frames and labels.
 HEIGHT=750
@@ -25,16 +26,25 @@ ICON_WIDTH=40
 
 # UPDATE RANDOM NUMBER TEST
 # Tests to see if label values can change without issues.
-REFRESH_RATE = 50   # Measured in milliseconds
+REFRESH_RATE = 25   # Measured in milliseconds
 MIN_FLOAT = 0.0
 MAX_FLOAT = 300.0
 DIGITS = 2
 normalUnitArray = []
 for i in range(19):
     normalUnitArray.append(12.34)
-    # Initialize / populate the array.
+    # Initialize / populate the array with a constant value.
     # If label value shows 12.34, then update / refresh failed.
+    # Code shows normalUnitArray[] shows the default value only. NOT SUBJECT TO CHANGE
 
+# INITIALIZING TIME
+# These values are defaults. If they show up, then time has failed to update
+mins = 52
+secs = 42
+ms = 56
+timeformat = '{:02d}:{:02d}:{:02d}'.format(mins, secs, ms)
+t0 = time.time()    # Obtain the time of window creation.
+                    # FUTURE: This time should be obtained when START is pressed.
 
 # INITIALIZATION
 # Creation of the program(root) and its workspace(main_canv).
@@ -97,6 +107,8 @@ class tkLabelUnit:
 
 # UPDATE FUNCTION
 # Will assign random numbers to values whenever called.
+# This will overwrite normalUnitArray[] values by manually assigning them from here.
+# If values from normalUnitArray[] are shown, then it has failed to update.
 def updateRandValues():
     transSpeed.value['text'] = round(random.uniform(MIN_FLOAT, MAX_FLOAT), DIGITS)
     motorSpeed_Label.value['text'] = round(random.uniform(MIN_FLOAT, MAX_FLOAT), DIGITS)
@@ -117,6 +129,16 @@ def updateRandValues():
     batteryTemp2_Label.value['text'] = round(random.uniform(MIN_FLOAT, MAX_FLOAT), DIGITS)
     batteryTemp3_Label.value['text'] = round(random.uniform(MIN_FLOAT, MAX_FLOAT), DIGITS)
     batteryTemp4_Label.value['text'] = round(random.uniform(MIN_FLOAT, MAX_FLOAT), DIGITS)
+
+    # Update time
+    # FUTURE: Start this block of code only when button is pressed
+    t1 = time.time() 
+    nowtime = (t1-t0)
+    ms = int((nowtime*100)%100)
+    secs = int(nowtime % 60)
+    mins = int((nowtime/60)%60)
+    timeformat = '{:02d}:{:02d}:{:02d}'.format(mins, secs, ms)
+    elapse_value['text']=timeformat
 
     # Recursive function to update values.
     root.after(REFRESH_RATE, updateRandValues)
