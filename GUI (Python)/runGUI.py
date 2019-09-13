@@ -249,7 +249,7 @@ batteryTitle = tkTitle(master=bat_canv, title="Battery", iconpos=0.34, titlepos=
 
 batteryVoltage_Label = tkLabelUnit(master=bat_canv, str='Voltage:', val=normalUnitArray[13], unit='V', list=0)
 batteryCurrent_Label = tkLabelUnit(master=bat_canv, str='Current:', val=normalUnitArray[14], unit='A', list=1)
-batteryLife_Label = tkLabelUnit(master=bat_canv, str='Battery Life:', val=0.01, unit='%', list=2)
+batteryLife_Label = tkLabelUnit(master=bat_canv, str='Battery Life:', val=0.02, unit='%', list=2)
 batteryTemp1_Label = tkLabelUnit(master=bat_canv, str='Pack 1 Temp:', val=normalUnitArray[15], unit='°C', list=3)
 batteryTemp2_Label = tkLabelUnit(master=bat_canv, str='Pack 2 Temp:', val=normalUnitArray[16], unit='°C', list=4)
 batteryTemp3_Label = tkLabelUnit(master=bat_canv, str='Pack 3 Temp:', val=normalUnitArray[17], unit='°C', list=5)
