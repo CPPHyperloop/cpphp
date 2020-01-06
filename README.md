@@ -3,30 +3,25 @@
 ### WORKFLOW NOTE:
 
 To get the repository / project:
-
- > Blockquote
-          >> Nested Blockquote
-   
-Markup : > $ git clone https://github.com/CPPHyperloop/cpphyperloop.git
-   
-Always pull before starting your work:/newline
+``` 
+$ git clone https://github.com/CPPHyperloop/cpphyperloop.git
 ```
->[REPOSITORY_DIRECTORY]$ git pull
+Always pull before starting your work:   
 ```
-   
+ [REPOSITORY_DIRECTORY]$ git pull
+```
 Check for untracked / unsynched files:   
 ```
->[REPOSITORY_DIRECTORY]$ git status
+[REPOSITORY_DIRECTORY]$ git status
 ```
-   
-Add file to be ready to commit:   
+Add file to be ready to commit:     
 ```
->[REPOSITORY_DIRECTORY]$ git add [FILE_NAME.ext]
+[REPOSITORY_DIRECTORY]$ git add [FILE_NAME.ext]
 ```
-   
-Add all changed files at the same time   
-Markup : > ```
-         > [REPOSITORY_DIRECTORY]$ git add -A >```
+Add all changed files at the same time      
+```
+[REPOSITORY_DIRECTORY]$ git add -A 
+```
 
 Commit all files that are ready. Please include a message describing the change:
 ```
