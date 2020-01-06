@@ -24,16 +24,13 @@ Add all changed files at the same time
 ```
 
 Commit all files that are ready. Please include a message describing the change:
-```
-[REPOSITORY_DIRECTORY]$ git commit -m "message"
-```
 <pre>
-
+[REPOSITORY_DIRECTORY]$ git commit -m "message"
 If a longer message is required:
    
     [REPOSITORY_DIRECTORY]$ git commit
-
 </pre>
+
 Change / update the repository:
 ```
 >[REPOSITORY_DIRECTORY]$ git push
