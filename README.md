@@ -3,9 +3,9 @@
 ### WORKFLOW NOTE:
 
 To get the repository / project:
-```
-Markup :  > $ git clone https://github.com/CPPHyperloop/cpphyperloop.git
-```
+   
+Markup : > $ git clone https://github.com/CPPHyperloop/cpphyperloop.git
+   
 Always pull before starting your work:/newline
 ```
 >[REPOSITORY_DIRECTORY]$ git pull
