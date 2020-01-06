@@ -4,7 +4,7 @@
 
 To get the repository / project:
 
-Markup :  > Blockquote
+ > Blockquote
           >> Nested Blockquote
    
 Markup : > $ git clone https://github.com/CPPHyperloop/cpphyperloop.git
